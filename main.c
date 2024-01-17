@@ -10,8 +10,8 @@ projct_t projct = {NULL, NULL, NULL, 0};
 
 int main(int argc, char *argv[])
 {
-	char *linecont;
-	FILE *flpointer;
+	char *linecnt;
+	FILE *flpntr;
 	size_t linesize = 0;
 	ssize_t rdres = 1;
 	stack_t *stk = NULL;
@@ -32,15 +32,16 @@ int main(int argc, char *argv[])
 	while (rdres > 0)
 	{
 		linecnt = NULL;
-		rdres = getline(&linecnt, &linesize, filepntr);
+		rdres = getline(&linecnt, &linesize, flpntr);
 		projct.linecnt = linecnt;
-		sum++;
+		total++;
 		if (rdres > 0)
 		{
-			sq_execute(linecnt, &stk, sum, flpntr);
+			sq_execute(linecnt, &stk, total, flpntr);
 		}
 		free(linecnt);
 	}
 	free_stack(stk);
 	fclose(flpntr);
+return (0);
 }

@@ -36,7 +36,7 @@ void stack_pchar(stack_t **head, unsigned int position)
 	currenthd = *head;
 	if (currenthd == NULL)
 	{
-		fprintf(stderr, "L%d: can't pchar, stack empty\n", position)
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", position);
 		fclose(projct.flpntr);
 		free(projct.linecnt);
 		free_stack(*head);
@@ -44,7 +44,7 @@ void stack_pchar(stack_t **head, unsigned int position)
 	}
 	if (currenthd->n > 127 || currenthd->n < 0)
 	{
-		fprintf(stderr, "L%d: can't pchar, value out of range\n", postion);
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", position);
 		fclose(projct.flpntr);
 		free(projct.linecnt);
 		free_stack(*head);

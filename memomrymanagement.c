@@ -1,3 +1,5 @@
+#include "monty.h"
+
 /**
  * free_stack - Frees all nodes in doubly linked list
  * @head: pointer to the head

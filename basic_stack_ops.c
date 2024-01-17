@@ -1,4 +1,4 @@
-#include "monty"
+#include "monty.h"
 
 /**
  * stack_push - Adding a new node to stack

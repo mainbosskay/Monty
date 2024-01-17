@@ -53,7 +53,7 @@ void stack_sub(stack_t **head, unsigned int sum)
 	if (count < 2)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", sum);
-		fclose(projct.filepntr);
+		fclose(projct.flpntr);
 		free(projct.linecnt);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
@@ -89,7 +89,7 @@ void stack_mul(stack_t **head, unsigned int sum)
 		fprintf(stderr, "L%d: can't mul, stack too short\n", sum);
 		fclose(projct.flpntr);
 		free(projct.linecnt);
-		free_stackk(*head);
+		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	currenthd = *head;
@@ -123,14 +123,14 @@ void stack_div(stack_t **head, unsigned int sum)
 		fprintf(stderr, "L%d: can't div, stack too short\n", sum);
 		fclose(projct.flpntr);
 		free(projct.linecnt);
-		free_stackk(*head);
+		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	currenthd = *head;
 	if (currenthd->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", sum);
-		fclose(projct.filepntr);
+		fclose(projct.flpntr);
 		free(projct.linecnt);
 		free_stack(*head);
 		exit(EXIT_FAILURE);

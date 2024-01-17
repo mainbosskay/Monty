@@ -28,7 +28,7 @@ int sq_execute(char *linecnt, stack_t **head, unsigned int sum, FILE *flpntr)
 	unsigned int k = 0;
 	char *currentopcd;
 
-	currentopcd = strtok(lncontent, " \n\t");
+	currentopcd = strtok(linecnt, " \n\t");
 	if (currentopcd && currentopcd[0] == '#')
 		return (0);
 	projct.argva = strtok(NULL, " \n\t");
