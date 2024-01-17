@@ -114,7 +114,7 @@ void stack_pint(stack_t **head, unsigned int position)
 {
 	if (*head == NULL)
 	{
-		fprintf(stderr, "L%u: can't pint, empty\n", position);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", position);
 		fclose(projct.flpntr);
 		free(projct.linecnt);
 		free_stack(*head);
